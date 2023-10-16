@@ -1,0 +1,303 @@
+
+
+@media screen and (min-width: 1152px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --bigger-font-size: 2rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+
+
+
+
+
+
+/********************************** max-width *******************************/
+
+@media screen and (max-width: 780px) {
+    .hero-area nav .hamb {
+        display: initial;
+    }
+    .hero-area .click {
+        top: 46px;
+    }
+    .hero-area .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+    .hero-area .click span:first-child{
+        transform: rotate(-40deg);
+    }
+    .hero-area .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+    .hero-area .click span:last-child {
+        transform: rotate(40deg);
+        top: 0;
+    }
+    .hero-area nav .nav-list {
+        position: fixed;
+        top: 72px;
+        right: -65%;
+        bottom: 0;
+        width: 60%;
+        height: 400px;
+        background-color: hsla(0, 0%, 10%, .3);
+        z-index: 2;
+        padding: 6% 9%;
+        transition: .3s right;
+        border-radius: 0px 0px 0px 10px;
+        backdrop-filter: blur(24px);
+    }
+    .hero-area nav .nav-list li {
+        display: block;
+    }
+    .hero-area nav .nav-list li a {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    .hero-area nav .nav-list li.btn a {
+        position: absolute;
+        bottom: 0%;
+        right: 20%;
+        left: 20%;
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+
+    .hero-area nav .nav-list.open {
+        right: 0px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    :root {
+        --biggest-font-size: 2.3rem;
+    }
+
+    #home .home-data h1 {
+        width: 95%;
+    }
+
+    #home .home-data h1 {
+        font-size: var(--biggest-font-size);
+        font-weight: bold;
+      
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid white; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */ /* Adjust as needed */
+        animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 95%;
+        }
+      }
+
+      .contact-input {
+        padding: 1rem .37rem;
+        justify-content: center;
+      }
+}
+
+
+
+
+
+/********************************** min-width *******************************/
+
+@media screen and (min-width: 576px) {
+
+    .home-container,
+    .about-container,
+    .skills-container,
+    .services-container,
+    .projects-container,
+    .contact-container {
+        grid-template-columns: 310px;
+        justify-content: center;
+    }
+   
+}
+
+@media screen and (min-width: 768px) {
+    .home-container,
+    .about-container,
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .home-data,
+    .about-data,
+    .skills-data,
+    :is(.about-data, .skills-data) :is(.section-subtitle, .section-title) {
+        text-align: initial;
+    }
+    .home-social {
+        justify-content: initial;
+    }
+    .home-blob,
+    .about-blob {
+        width: 400px;
+    }
+    .about-data {
+        order: 1;
+    }
+    .services-container,
+    .projects-container {
+        grid-template-columns: repeat(2, 352px);
+    }
+
+}
+
+@media screen and (min-width: 1023px) {
+    .section {
+        padding-block: 7rem 2rem;
+    }
+    .section-subtitle {
+        font-size: var(--normal-font-size);
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .container {
+        margin-inline: auto;
+    }
+    .home-container {
+        grid-template-columns: 430px 530px;
+        column-gap: 7rem;
+        padding-block: 2rem 3rem;
+    }
+    .home-blob,
+    .about-blob {
+        width: 550px;
+    }
+    .home-content {
+        row-gap: 4.5rem;
+    }
+    .home-description {
+        margin-block: 1.5rem 2.5rem;
+    }
+    .home-social {
+        column-gap: 1.5rem;
+    }
+    .about-container {
+        grid-template-columns: 550px 457px;
+        column-gap: 4.5rem;
+        padding-bottom: 1rem;
+    }
+    .about-description,
+    .skills-description {
+        margin-bottom: 3rem;
+    }
+    .skills-container {
+        grid-template-columns: 340px 425px;
+        column-gap: 10rem;
+        padding-bottom: 4rem;
+    }
+    .skills-content {
+        column-gap: 8rem;
+    }
+    .skills-group {
+        row-gap: 1.5rem;
+    }
+    .skills-item {
+        font-size: var(--h3-font-size);
+    }
+    .services-container {
+        grid-template-columns: repeat(3, 352px);
+        padding-block: 2.5rem 4rem;
+    }
+    .services-card {
+        padding: 3.5rem 2rem;
+    }
+    .projects-container {
+        grid-template-columns: repeat(3, 350px);
+        row-gap: 3rem;
+        padding-block: 2.5rem 4rem;
+    }
+    .projects-button {
+        font-size: var(--normal-font-size);
+    }
+    .contact-container {
+        grid-template-columns: 680px;
+        padding-block: 2.5rem 2rem;
+    }
+    .contact-form {
+        row-gap: 1.5rem;
+    }
+    .contact-group {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+    .contact-input {
+        padding: 1.5rem;
+    }
+    .contact-form textarea {
+        height: 20rem;
+    }
+    .footer {
+        padding-block: 4.5rem 4rem;
+    }
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        text-align: initial;
+    }
+    .footer-title {
+        font-size: var(--bigger-font-size);
+    }
+    .footer-social {
+        column-gap: 1.5rem;
+    }
+    .footer-copy {
+        margin: 0;
+        justify-self: flex-end;
+    }
+    .scrollup {
+        right: 3rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
